@@ -1,0 +1,260 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	font-family: 'youyuan';
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none!important;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+
+/*nav start*/
+
+nav.navbar {
+	background-color: transparent;
+	position: fixed;
+	width: 100%;
+}
+
+nav .navbar-brand {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+nav.navbar a {
+	color: #fff;
+	transition: 0.5s background-color linear;
+}
+
+nav.navbar .navbar-nav li.active a {
+	background: rgba(88, 88, 88, .8);
+}
+
+nav.navbar .navbar-nav a:hover {
+	background: rgba(88, 88, 88, .8);
+}
+
+nav .navbar-toggle {
+	background: transparent;
+}
+
+.navbar-toggle .icon-bar {
+	background: #fff;
+}
+
+
+/*nav end*/
+
+.bgbox {
+	padding-top: 50px;
+	width: 100%;
+}
+
+
+/*index*/
+
+.index {
+	height: 640px;
+	background: url(../img/header-bg.jpg) no-repeat center top fixed;
+	background-size: cover;
+	position: relative;
+}
+
+.index .index-box {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(33, 32, 42, 0.44);
+	height: 100%;
+}
+
+.index .use {
+	box-sizing: content-box;
+	padding-top: 100px;
+	width: 800px;
+	height: 240px;
+	line-height: 200px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.index .use h1 {
+	text-align: center;
+	font-size: 120px;
+	font-weight: 400;
+	font-family: 'RespighiOpti Script', 'Heather Script Two';
+	line-height: 150px;
+	color: #fff;
+	letter-spacing: 1px;
+	word-spacing: 6px;
+	text-shadow: -2px -2px #000;
+}
+
+.index .use .tagline {
+	font-size: 27px;
+	margin-bottom: 60px;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	line-height: 56px;
+	word-spacing: 2px;
+	text-shadow: 2px 2px #1C2725;
+	letter-spacing: 2px;
+	text-transform: capitalize;
+}
+.index .btn-hire{padding-top: 80px;text-align: center;}
+.index .btn-hire .btn-hire-a{
+	display: inline-block;
+	box-sizing: content-box;
+	height: 25px;width: 75px;
+	text-transform: uppercase;
+    color: #111;
+    border: 1px solid rgb(136, 138, 145);
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 300;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 1px 0 rgba(20, 20, 26, 0.55);
+    border-radius: 0;
+    font-size: 18px;
+    background-color: rgba(247, 255, 248, 1);
+    padding: 16px 48px;
+    transition: all 0.5s ease-in-out; 
+    }
+.index .btn-hire .btn-hire-a:hover{
+	background: #000000;border: 1px solid #fff;color: #fff;
+}
+.index .btn-xia{padding-top: 40px;text-align: center;}
+.index .btn-xia i{font-size: 32px;color: #fff;display: inline-block;font-weight: 200;}
+@-webkit-keyframes zoomInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+@keyframes zoomInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+.zoomInDown {
+  -webkit-animation: zoomInDown 1.4s ease-in-out forwards;
+  animation: zoomInDown 1.4s ease-in-out forwards;
+}
+
+/*about*/
+.stars{
+	position: absolute;top: 0;left: 0;bottom: 0;
+}
+.about,.skill,.project,.contact{
+	position: absolute;top: 0;left: 0;bottom: 0;
+	/*height: 100%;*/
+	background: #000;
+	background-size: cover;
+	color: #fff;
+}
+.bgbox .title{
+	padding: 20px 10px;
+	text-align: center;
+	line-height: 4.2rem;
+	font-size: 2.6rem;
+	color: #fff;
+}
+.bgbox .sec-title{
+	text-align: center;color: #fff;
+}
+.about .touxiang{
+	border-radius: 50%;
+}
+.about .table-box{padding: 50px 150px 20px 0;font-size: 16px;}
+.about .table-box tr th:first-child{padding-left: 20px;}
+.about .table-box tr td:last-child{padding-left: 20px;}
+/*skill*/
+.skill{
+	height: 100%;
+	/*background: -webkit-radial-gradient(center center, 800px 800px, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0));*/
+}
+.jindu-box{
+	/*padding-top: 50px;*/
+}
+.jindu-box p{margin: 0;}
+.canvas-div {
+    /*width: 160px;*/
+    height: 160px;
+    padding: 0;
+    /*float: left;*/
+    position: relative;
+}
+.skill-box{padding-top: 50px;font-size: 17px;}
+
+
+/*project*/
+/*.project{height: auto; }*/
+.project .container{
+	/*border: 1px solid #fff;*/
+	padding-top: 20px;
+}
+.project .container .projects{border-bottom: 1px dashed ivory;padding-top: 20px;}
+.project .container .col-lg-4{padding:0 0 0 80px;border-right: 1px solid azure;}
+.project-title{
+	border-radius: 50%;text-align: center;width: 140px;height:140px ;line-height: 140px;
+	background: -webkit-radial-gradient(center center, 80px 80px, rgba(244, 23, 234, .3), rgba(0, 0, 0, 0));
+	font-size: 20px;
+}
+.project-details .time{padding-bottom: 15px;}
+.description,.duty{font-weight: bold;font-size: 16px;}
+/*contact*/
+.contact .container{
+	padding-top: 20px;
+}
+/*.contact .container .col-lg-4{text-align: center;}
+.contact .container .col-lg-4 span.glyphicon{
+	font-size:40px;
+}*/
+.contact .container form .form-control{
+	background: #333;margin-bottom: 2px;
+	border: 0;color: #fafafa;
+}
+.contact .container form textarea{overflow: hidden;}
+.contact .tubiao-box{position: relative;width: 120px;height: 100px;padding: 0;}
+.contact .tubiao-box .rotate-box{position: absolute;top:20px;left:20px;width: 50px;height: 50px;border: 3px double #fff;transform: rotate(-45deg);}
+.contact .tubiao-box .glyphicon{position: absolute;top:33%;left:-12%;font-size: 20px;width: 100%;text-align: center;}
+.contact .words{padding-top: 20px;font-size: 16px;font-weight: bold;}

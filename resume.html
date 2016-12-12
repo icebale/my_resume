@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" type="text/css" href="css/resume.css" />
+		<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-route.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/resume.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body ng-app="app">
+
+		<nav class="navbar navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynav">
+				        <span class="sr-only"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				    </button>
+					<a class="navbar-brand" href="#">resume</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="mynav">
+					<ul class="nav navbar-nav navbar-right">
+						<li ng-class="{active:statusH === '/index'}">
+							<a href="#/index">首页</a>
+						</li>
+						<li ng-class="{active:statusH === '/about'}">
+							<a href="#/about" class="about-a">关于我</a>
+						</li>
+						<li ng-class="{active:statusH === '/skill'}">
+							<a href="#/skill">技能在身</a>
+						</li>
+						<li ng-class="{active:statusH === '/project'}">
+							<a href="#/project">项目经验</a>
+						</li>
+						<li ng-class="{active:statusH === '/contact'}">
+							<a href="#/contact">联系我</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</nav>
+		<div class="clearfix"></div>
+		<div ng-view></div>
+		<script type="text/ng-template" id="tmp1">
+			<div class="index bgbox">
+				<div class="index-box">
+					<div class="use">
+						<h1>Web Developer</h1>
+						<p class="tagline">Bring Your Dreams To Life</p>
+					</div>
+					<div class="btn-hire">
+						<a class="btn-hire-a" ng-class="{animated:door,zoomInDown:door}" ng-click="hire()">Hire Me</a>
+					</div>
+					<div class="btn-xia"><i class="glyphicon glyphicon-chevron-down" ng-click="xia()"></i></div>
+				</div>
+			</div>
+		</script>
+		<script type="text/ng-template" id="tmp2">
+			<div class="about bgbox">
+				<h1 class="title">关于我</h1>
+				<h4 class="sec-title"> 如果debugging是一种消灭bug的过程,那编程就一定是把bug放进去的过程。</h4>
+
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3">
+							<img class="touxiang" src="img/user.jpg" />
+						</div>
+						<div class="col-lg-9 col-md-9 col-sm-9 table-box">
+							<table class="table">
+								<tr>
+									<th>姓名:</th>
+									<td>赵晓英</td>
+									<th>联系方式:</th>
+									<td>18435122708</td>
+								</tr>
+								<tr>
+									<th>性别:</th>
+									<td>女</td>
+									<th>邮箱:</th>
+									<td>xiaoying2708@163.com</td>
+								</tr>
+								<tr>
+									<th>出生年月:</th>
+									<td>1994.08</td>
+									<th>QQ:</th>
+									<td>1228001601</td>
+								</tr>
+								<tr>
+									<th>学历:</th>
+									<td>本科</td>
+									<th>毕业院校:</th>
+									<td>太原师范学院</td>
+								</tr>
+								<tr>
+									<th>专业:</th>
+									<td>物联网工程</td>
+									<th>英语:</th>
+									<td>英语六级</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<canvas class="stars" width="100%" height="100%"></canvas>
+		</script>
+		<script type="text/ng-template" id="tmp3">
+			<div class="skill bgbox">
+				<h1 class="title">技能在身</h1>
+				<h4 class="sec-title">代码，我们眼中的世界，别人眼中的天书。</h4>
+
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 jindu-box">
+							<p>html5</p>
+							<div class="progress" ng-class="{animated:tan, fadeInUp:tan} ">
+								<div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
+									html5 95%
+								</div>
+							</div>
+							<p>css3</p>
+							<div class="progress" ng-class="{animated:tan, fadeInUp:tan} ">
+								<div class="progress-bar" role="progressbar" aria-valuemax="100" style="width: 90%;">
+									css3 90%
+								</div>
+							</div>
+							<p>javaScript</p>
+							<div class="progress" ng-class="{animated:tan, fadeInUp:tan} ">
+								<div class="progress-bar" role="progressbar" aria-valuemax="100" style="width: 85%;">
+									js 85%
+								</div>
+							</div>
+							<p>jQuery</p>
+							<div class="progress" ng-class="{animated:tan, fadeInUp:tan} ">
+								<div class="progress-bar" role="progressbar" aria-valuemax="100" style="width: 85%;">
+									jQuery 85%
+								</div>
+							</div>
+							<p>bootstrap</p>
+							<div class="progress" ng-class="{animated:tan, fadeInUp:tan} ">
+								<div class="progress-bar" role="progressbar" aria-valuemax="100" style="width: 85%;">
+									bootstrap 85%
+								</div>
+							</div>
+							<p>Photoshop</p>
+							<div class="progress" ng-class="{animated:tan, fadeInUp:tan} ">
+								<div class="progress-bar" role="progressbar" aria-valuemax="100" style="width: 85%;">
+									PS 85%
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 skill-box">
+							<p>1. 熟练HTML5，CSS3，JavaScript技术，开发符合W3C标准的前端网页。</p>
+							<p>2. 熟练使用jQuery，bootstrap等前端框架技术。</p>
+							<p>3. 熟悉sass工具，扩展css功能,提高css功能和效率。</p>
+							<p>4. 熟悉Ajax的运行机制，能使用ajax进行数据交互。</p>
+							<p>5. 熟练使用PS，能快速切图和搭建原型图。</p>
+							<p>6. 熟悉W3C标准，对表现与数据分离、Web语义化等有较为深刻的理解。</p>
+							<p>7. 精通流体布局和弹性布局，能适应各种分辨率。</p>
+							<p>8. 熟悉各种主流浏览器的差异性，有解决主流浏览器的兼容性问题的经验。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--<canvas class="stars" width="100%" height="100%"></canvas>-->
+		</script>
+		<script type="text/ng-template" id="tmp4">
+			<div class="project bgbox" style="height: 1500px;">
+				<h1 class="title">项目经验</h1>
+				<h4 class="sec-title" style="text-align: left;padding-left: 100px;"> 这里是最近的一些项目,点击<a href="">这里</a>查看更多</h4>
+				<div class="container">
+					<div class="row ">
+						<div class="col-lg-12 projects">
+							<div class="col-lg-4">
+								<div class="project-title">
+									macbook(仿)
+								</div>
+							</div>
+							<div class="col-lg-8">
+								<div class="project-details">
+									<ul>
+										<li class="time">开发时间:2016.11.10</li>
+										<li class="description">
+											<p class="des-title">项目描述</p>
+											<p class="description-p">
+												<span class="jishu">使用技术:html5 + css3 + materialize + js + jq</span><br /> 该项目是使用materialize框架实现网页响应式布局,使用js、jg来实现网页的基本功能
+												<br />
+												<span class="zhanshi">项目展示:<a href="https://github.com/icebale/macbook">https://github.com/icebale/macbook</a> </span>
+											</p>
+										</li>
+										<li class="duty">
+											<p>责任描述</p>
+											<p>1. 根据项目需求，快速构造原型图</p>
+											<p>2. 参与页面的部分设计</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+
+						<div class="col-lg-12 projects">
+							<div class="col-lg-4">
+								<div class="project-title">
+									后台管理
+								</div>
+							</div>
+							<div class="col-lg-8">
+								<div class="project-details">
+									<ul>
+										<li class="time">开发时间:2016.11.10</li>
+										<li class="description">
+											<p class="des-title">项目描述</p>
+											<p class="description-p">
+												<span class="jishu">使用技术:html5 + css3 + bootstrap + js + jq</span><br /> 该项目是使用bootstrap框架实现网页响应式布局,使用js、jQuery来实现后台管理的增、删、改、查等功能,用eCharts插件实现数据管理与各种表格的实现
+												<br />
+												<span class="zhanshi">项目展示:<a href="#">https://github.com/icebale/macbook</a> </span>
+											</p>
+										</li>
+										<li class="duty">
+											<p>责任描述</p>
+											<p>1. 根据项目需求，快速构造原型图</p>
+											<p>2. 页面的设计与实现</p>
+											<p>3. 页面功能的实现</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 projects">
+							<div class="col-lg-4">
+								<div class="project-title">
+									平行世界
+								</div>
+							</div>
+							<div class="col-lg-8">
+								<div class="project-details">
+									<ul>
+										<li class="time">开发时间:2016.10.20</li>
+										<li class="description">
+											<p class="des-title">项目描述</p>
+											<p class="description-p">
+												<span class="jishu">使用技术:html5 + css3 + js + jq</span><br /> 该项目是使用html5+css3实现App布局,使用js、jg来实现网页的基本功能,以及使用swiper,isroll插件添加动画以及阻尼效果
+												<br />
+												<span class="zhanshi">项目展示:<a href="#">https://github.com/icebale/macbook</a> </span>
+											</p>
+										</li>
+										<li class="duty">
+											<p>责任描述</p>
+											<p>1. 搜集素材</p>
+											<p>2. 根据项目需求，快速构造原型图</p>
+											<p>3. 所有页面的设计与实现</p>
+											<p>4. 后期代码的完善与优化</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 projects">
+							<div class="col-lg-4">
+								<div class="project-title">
+									keyBoard
+								</div>
+							</div>
+							<div class="col-lg-8">
+								<div class="project-details">
+									<ul>
+										<li class="time">开发时间:2016.10.20</li>
+										<li class="description">
+											<p class="des-title">项目描述</p>
+											<p class="description-p">
+												<span>团队项目</span><br />
+												<span class="jishu">使用技术:html5 + css3 + fullpage +  js + jq + SVN</span><br /> 该项目是使用html5+css3+fullpage实现响应式布局,使用js、jQ来实现网页的基本功能,各成员各司其职,竭诚合作,共同完成
+												<br />
+												<span class="zhanshi">项目展示:<a href="#">https://github.com/icebale/macbook</a> </span>
+											</p>
+										</li>
+										<li class="duty">
+											<p>责任描述</p>
+											<p>1. 代码规范的编写</p>
+											<p>2. 根据项目需求，快速构造原型图</p>
+											<p>3. 首页的布局及功能实现</p>
+											<p>4. 响应式布局调整与优化</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</script>
+		<script type="text/ng-template" id="tmp5">
+			<div class="contact bgbox">
+				<h1 class="title">联系我</h1>
+				<h4 class="sec-title">快把我收到碗里吧^_^</h4>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6">
+							<form novalidate name="myForm">
+								<input type="text" name="myName" class="form-control" placeholder="用户名" ng-model="text" required ng-minlength="3" ng-maxlength="12" ng-pattern="/^\w+$/" ng-keyup="sayMsg(myForm.myName.$error,true)" />
+								<p ng-repeat="message in nameobj.nameMessages|filter:nameobj.type">{{message.msg}}</p>
+								<br />
+								<input type="email" name="myPass" class="form-control" placeholder="邮箱" ng-model="pass" required ng-minlength="7" ng-maxlength="25" ng-pattern="/\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/" ng-keyup="sayMsg(myForm.myPass.$error)" />
+								<p ng-repeat="pass in passobj.passMessages|filter:passobj.type">{{pass.msg}}</p>
+								<textarea name="" class="form-control" rows="5" cols="" placeholder="说点什么吧"></textarea>
+							</form>
+						</div>
+						<div class="col-lg-6">
+							<div class="col-lg-12">
+								<div class="col-lg-4 tubiao-box">
+									<div class="rotate-box"></div>
+									<div class="glyphicon glyphicon-map-marker"></div>
+								</div>
+								<div class="col-lg-8 words">
+									Address: 308 Negra Arroyo Lane Albuquerque, New Mexico, 87111.
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<div class="col-lg-4 tubiao-box">
+									<div class="rotate-box"></div>
+									<div class="glyphicon glyphicon-earphone"></div>
+								</div>
+								<div class="col-lg-8 words">
+									Cell No: 18435122708
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<div class="col-lg-4 tubiao-box">
+									<div class="rotate-box"></div>
+									<div class="glyphicon glyphicon-envelope"></div>
+								</div>
+								<div class="col-lg-8 words">
+									Email: xiaoying2708@163.com
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</script>
+
+		<script>
+			var context;
+
+			var arr = new Array();
+			var starCount = 800;
+
+			var rains = new Array();
+			var rainCount = 20;
+
+			//初始化画布及context
+			function init() {
+				//获取canvas
+				var stars = document.querySelector(".stars");
+				windowWidth = window.innerWidth; //当前的窗口的高度
+				stars.width = windowWidth;
+				stars.height = window.innerHeight;
+				//获取context
+				context = stars.getContext("2d");
+			}
+
+			//创建一个星星对象
+			var Star = function() {
+				this.x = windowWidth * Math.random(); //横坐标
+				this.y = 5000 * Math.random(); //纵坐标
+				this.text = "."; //文本
+				this.color = "white"; //颜色
+
+				//产生随机颜色
+				this.getColor = function() {
+
+					var _r = Math.random();
+
+					if(_r < 0.5) {
+						this.color = "#333";
+					} else {
+						this.color = "white";
+					}
+
+				}
+
+				//初始化
+				this.init = function() {
+						this.getColor();
+					}
+					//绘制
+				this.draw = function() {
+					context.fillStyle = this.color;
+					context.fillText(this.text, this.x, this.y);
+				}
+
+			}
+
+			//页面加载的时候
+			window.onload = function() {
+
+				init();
+				//画星星
+				for(var i = 0; i < starCount; i++) {
+					var star = new Star();
+					star.init();
+					star.draw();
+					arr.push(star);
+				}
+
+				//画流星
+				for(var i = 0; i < rainCount; i++) {
+					var rain = new MeteorRain();
+					rain.init();
+					rain.draw();
+					rains.push(rain);
+				}
+
+				playStars(); //绘制闪动的星星
+				playRains(); //绘制流星
+
+			}
+
+			//星星闪起来
+			function playStars() {
+				for(var n = 0; n < starCount; n++) {
+					arr[n].getColor();
+					arr[n].draw();
+				}
+
+				setTimeout("playStars()", 100);
+			}
+
+			/*流星雨开始*/
+
+			var MeteorRain = function() {
+				this.x = -1;
+				this.y = -1;
+				this.length = -1; //长度
+				this.angle = 30; //倾斜角度
+				this.width = -1; //宽度
+				this.height = -1; //高度
+				this.speed = 1; //速度
+				this.offset_x = -1; //横轴移动偏移量
+				this.offset_y = -1; //纵轴移动偏移量
+				this.alpha = 1; //透明度
+				this.color1 = ""; //流星的色彩
+				this.color2 = ""; //流星的色彩
+				/****************初始化函数********************/
+				this.init = function() //初始化
+					{
+						this.getPos();
+						this.alpha = 1; //透明度
+						this.getRandomColor();
+						//最小长度，最大长度
+						var x = Math.random() * 80 + 150;
+						this.length = Math.ceil(x);
+						//                  x = Math.random()*10+30;
+						this.angle = 30; //流星倾斜角
+						x = Math.random() + 0.5;
+						this.speed = Math.ceil(x); //流星的速度
+						var cos = Math.cos(this.angle * 3.14 / 180);
+						var sin = Math.sin(this.angle * 3.14 / 180);
+						this.width = this.length * cos; //流星所占宽度
+						this.height = this.length * sin; //流星所占高度
+						this.offset_x = this.speed * cos;
+						this.offset_y = this.speed * sin;
+					}
+
+				/**************获取随机颜色函数*****************/
+				this.getRandomColor = function() {
+					var a = Math.ceil(255 - 240 * Math.random());
+					//中段颜色
+					this.color1 = "rgba(" + a + "," + a + "," + a + ",1)";
+					//结束颜色
+					this.color2 = "black";
+				}
+
+				/***************重新计算流星坐标的函数******************/
+				this.countPos = function() //
+					{
+						//往左下移动,x减少，y增加
+						this.x = this.x - this.offset_x;
+						this.y = this.y + this.offset_y;
+					}
+
+				/*****************获取随机坐标的函数*****************/
+				this.getPos = function() //
+					{
+						//横坐标200--1200
+
+						this.x = Math.random() * window.innerWidth; //窗口高度
+						//纵坐标小于600
+						this.y = Math.random() * window.innerHeight; //窗口宽度
+					}
+					/****绘制流星***************************/
+				this.draw = function() //绘制一个流星的函数
+					{
+						context.save();
+						context.beginPath();
+						context.lineWidth = 1; //宽度
+						context.globalAlpha = this.alpha; //设置透明度
+						//创建横向渐变颜色,起点坐标至终点坐标
+						var line = context.createLinearGradient(this.x, this.y,
+							this.x + this.width,
+							this.y - this.height);
+
+						//分段设置颜色
+						line.addColorStop(0, "white");
+						line.addColorStop(0.3, this.color1);
+						line.addColorStop(0.6, this.color2);
+						context.strokeStyle = line;
+						//起点
+						context.moveTo(this.x, this.y);
+						//终点
+						context.lineTo(this.x + this.width, this.y - this.height);
+						context.closePath();
+						context.stroke();
+						context.restore();
+					}
+				this.move = function() {
+					//清空流星像素
+					var x = this.x + this.width - this.offset_x;
+					var y = this.y - this.height;
+					context.clearRect(x - 3, y - 3, this.offset_x + 5, this.offset_y + 5);
+					//                  context.strokeStyle="red";
+					//                  context.strokeRect(x,y-1,this.offset_x+1,this.offset_y+1);
+					//重新计算位置，往左下移动
+					this.countPos();
+					//透明度增加
+					this.alpha -= 0.002;
+					//重绘
+					this.draw();
+				}
+
+			}
+
+			//绘制流星
+			function playRains() {
+
+				for(var n = 0; n < rainCount; n++) {
+					var rain = rains[n];
+					rain.move(); //移动
+					if(rain.y > window.innerHeight) { //超出界限后重来
+						context.clearRect(rain.x, rain.y - rain.height, rain.width, rain.height);
+						rains[n] = new MeteorRain();
+						rains[n].init();
+					}
+				}
+				setTimeout("playRains()", 2);
+			}
+
+			/*流星雨结束*/
+		</script>
+		<!--<script>
+//			alert(document.querySelector(".html5"))
+			var canvashtml5 = document.querySelector(".html5").getContext('2d')
+			var canvascss3 = document.querySelector(".css3").getContext("2d");
+			var canvasjs = document.querySelector(".js").getContext("2d");
+			var canvasjq = document.querySelector(".jq").getContext("2d");
+			var canvasbs = document.querySelector(".bs").getContext("2d");
+			var canvasps = document.querySelector(".ps").getContext("2d");
+			var canwidth = 160;
+			var radius = 70;
+
+			function canhtml5() {
+				var deg = 0;
+				var html5T = function(deg) {
+					var r = deg * Math.PI / 180;
+					canvashtml5.clearRect(0, 0, canwidth, canwidth);
+					canvashtml5.beginPath();
+					canvashtml5.strokeStyle = "#F1652A";
+					canvashtml5.lineWidth = 10;
+					canvashtml5.arc(canwidth / 2, canwidth / 2, radius, 0 - 1 / 2 * Math.PI, r - 1 / 2 * Math.PI, false); //
+					canvashtml5.stroke();
+				};
+				var time = setInterval(function() {
+					deg += 4;
+					html5T(deg);
+					if(deg > 324) {
+						clearInterval(time);
+					}
+				}, 20);
+			}
+
+			function cancss3() {
+				var deg = 0;
+				var css3T = function(deg) {
+					var r = deg * Math.PI / 180;
+					//		canvascss3.clearRect(0, 0, canwidth, canwidth);
+					canvascss3.beginPath();
+					canvascss3.strokeStyle = "#409AD8";
+					canvascss3.lineWidth = 10;
+					canvascss3.arc(canwidth / 2, canwidth / 2, radius, 0 - 1 / 2 * Math.PI, r - 1 / 2 * Math.PI, false); //
+					canvascss3.stroke();
+				};
+				var time = setInterval(function() {
+					//		if(current.loadedTemplateUrl == 'tmp2') {
+					deg += 4;
+					css3T(deg);
+					if(deg > 324) {
+						clearInterval(time);
+					}
+					//		}
+				}, 20);
+			}
+
+			function canjs() {
+				var deg = 0;
+				var jsT = function(deg) {
+					var r = deg * Math.PI / 180;
+					//		canvasjs.clearRect(0, 0, canwidth, canwidth);
+					canvasjs.beginPath();
+					canvasjs.strokeStyle = "#ECB12C";
+					canvasjs.lineWidth = 10;
+					canvasjs.arc(canwidth / 2, canwidth / 2, radius, 0 - 1 / 2 * Math.PI, r - 1 / 2 * Math.PI, false); //
+					canvasjs.stroke();
+				};
+				var time = setInterval(function() {
+					//		if(current.loadedTemplateUrl == 'tmp2') {
+					deg += 4;
+					jsT(deg);
+					if(deg > 252) {
+						clearInterval(time);
+					}
+					//		}
+				}, 20);
+			}
+
+			function canjq() {
+				var deg = 0;
+				var jqT = function(deg) {
+					var r = deg * Math.PI / 180;
+					//		canvasjq.clearRect(0, 0, canwidth, canwidth);
+					canvasjq.beginPath();
+					canvasjq.strokeStyle = "#75B143";
+					canvasjq.lineWidth = 10;
+					canvasjq.arc(canwidth / 2, canwidth / 2, radius, 0 - 1 / 2 * Math.PI, r - 1 / 2 * Math.PI, false); //
+					canvasjq.stroke();
+				};
+				var time = setInterval(function() {
+					//		if(current.loadedTemplateUrl == 'tmp2') {
+					deg += 4;
+					jqT(deg);
+					if(deg > 288) {
+						clearInterval(time);
+						//			}
+					}
+				}, 20);
+			}
+
+			function canbs() {
+				var deg = 0;
+				var bsT = function(deg) {
+					var r = deg * Math.PI / 180;
+					//		canvasbs.clearRect(0, 0, canwidth, canwidth);
+					canvasbs.beginPath();
+					canvasbs.strokeStyle = "#583F85";
+					canvasbs.lineWidth = 10;
+					canvasbs.arc(canwidth / 2, canwidth / 2, radius, 0 - 1 / 2 * Math.PI, r - 1 / 2 * Math.PI, false); //
+					canvasbs.stroke();
+				};
+				var time = setInterval(function() {
+					//		if(current.loadedTemplateUrl == 'tmp2') {
+					deg += 4;
+					bsT(deg);
+					if(deg > 288) {
+						clearInterval(time);
+					}
+					//		}
+				}, 20);
+			}
+
+			function canps() {
+				var deg = 0;
+				var psT = function(deg) {
+					var r = deg * Math.PI / 180;
+					//		canvasps.clearRect(0, 0, canwidth, canwidth);
+					canvasps.beginPath();
+					canvasps.strokeStyle = "#031A3A";
+					canvasps.lineWidth = 10;
+					canvasps.arc(canwidth / 2, canwidth / 2, radius, 0 - 1 / 2 * Math.PI, r - 1 / 2 * Math.PI, false); //
+					canvasps.stroke();
+				};
+				var time = setInterval(function() {
+					//		if(current.loadedTemplateUrl == 'tmp2') {
+					deg += 4;
+					psT(deg);
+					if(deg > 288) {
+						clearInterval(time);
+						//			}
+					}
+				}, 20);
+			}
+
+			function hua() {
+				canhtml5();
+				cancss3();
+				canjs();
+				canjq();
+				canbs();
+				canps();
+			}
+			hua();
+		</script>
+	-->
+	</body>
+
+</html>
