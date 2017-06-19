@@ -59,9 +59,13 @@ nav .navbar-toggle {
 .bgbox {
 	padding-top: 50px;
 	width: 100%;
+	min-height: 100%;
 }
 
-
+.ng-scope{
+	min-height: 100%;
+	/*height: 100%;*/
+}
 /*index*/
 
 .index {
@@ -185,11 +189,14 @@ nav .navbar-toggle {
 	position: absolute;top: 0;left: 0;bottom: 0;
 }
 .about,.skill,.project,.contact{
-	position: absolute;top: 0;left: 0;bottom: 0;
+	/*position: absolute;top: 0;left: 0;bottom: 0;*/
 	/*height: 100%;*/
 	background: #000;
 	background-size: cover;
 	color: #fff;
+}
+.about{
+	min-height: 100%;
 }
 .bgbox .title{
 	padding: 20px 10px;
@@ -203,13 +210,14 @@ nav .navbar-toggle {
 }
 .about .touxiang{
 	border-radius: 50%;
+	margin: 4em 0;
 }
 .about .table-box{padding: 50px 150px 20px 0;font-size: 16px;}
 .about .table-box tr th:first-child{padding-left: 20px;}
 .about .table-box tr td:last-child{padding-left: 20px;}
 /*skill*/
 .skill{
-	height: 100%;
+	/*height: 100%;*/
 	/*background: -webkit-radial-gradient(center center, 800px 800px, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0));*/
 }
 .jindu-box{
@@ -227,7 +235,6 @@ nav .navbar-toggle {
 
 
 /*project*/
-/*.project{height: auto; }*/
 .project .container{
 	/*border: 1px solid #fff;*/
 	padding-top: 20px;
@@ -242,6 +249,9 @@ nav .navbar-toggle {
 .project-details .time{padding-bottom: 15px;}
 .description,.duty{font-weight: bold;font-size: 16px;}
 /*contact*/
+.contact{
+	
+}
 .contact .container{
 	padding-top: 20px;
 }
@@ -258,3 +268,16 @@ nav .navbar-toggle {
 .contact .tubiao-box .rotate-box{position: absolute;top:20px;left:20px;width: 50px;height: 50px;border: 3px double #fff;transform: rotate(-45deg);}
 .contact .tubiao-box .glyphicon{position: absolute;top:33%;left:-12%;font-size: 20px;width: 100%;text-align: center;}
 .contact .words{padding-top: 20px;font-size: 16px;font-weight: bold;}
+@media only screen and (min-width: 960px) and (max-width: 1024px) {
+	.index .use h1{
+		font-size: 80px;line-height: 100px;
+	}
+	.index .use .tagline {font-size: 20px;}
+}
+@media only screen and (max-width: 960px) {
+	.index{height: 100%;}
+	.index .use h1{
+		font-size: 40px;line-height: 60px;
+	}
+	.index .use .tagline {font-size: 16px;}
+}

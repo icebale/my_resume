@@ -3,7 +3,8 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>Icebela</title>
+		<link rel="shortcut icon" href="img/user.jpg">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="css/animate.css" />
 		<link rel="stylesheet" type="text/css" href="css/resume.css" />
@@ -67,17 +68,17 @@
 			</div>
 		</script>
 		<script type="text/ng-template" id="tmp2">
+			<canvas class="stars" width="100%" height="100%"></canvas>
 			<div class="about bgbox">
 				<h1 class="title">关于我</h1>
 				<h4 class="sec-title"> 如果debugging是一种消灭bug的过程,那编程就一定是把bug放进去的过程。</h4>
-
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-3">
-							<img class="touxiang" src="img/user.jpg" />
+						<div class="col-lg-3 xol-md-3 col-sm-3 col-xs-3">
+							<img class="touxiang img-responsive" src="img/user.jpg" />
 						</div>
-						<div class="col-lg-9 col-md-9 col-sm-9 table-box">
-							<table class="table">
+						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 table-box">
+							<table class="table table-responsive">
 								<tr>
 									<th>姓名:</th>
 									<td>赵晓英</td>
@@ -113,7 +114,7 @@
 					</div>
 				</div>
 			</div>
-			<canvas class="stars" width="100%" height="100%"></canvas>
+
 		</script>
 		<script type="text/ng-template" id="tmp3">
 			<div class="skill bgbox">
@@ -122,7 +123,7 @@
 
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-6 jindu-box">
+						<div class="col-md-6 col-xs-12 jindu-box">
 							<p>html5</p>
 							<div class="progress" ng-class="{animated:tan, fadeInUp:tan} ">
 								<div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
@@ -160,7 +161,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6 skill-box">
+						<div class="col-md-6 col-xs-12 skill-box">
 							<p>1. 熟练HTML5，CSS3，JavaScript技术，开发符合W3C标准的前端网页。</p>
 							<p>2. 熟练使用jQuery，bootstrap等前端框架技术。</p>
 							<p>3. 熟悉sass工具，扩展css功能,提高css功能和效率。</p>
@@ -178,16 +179,16 @@
 		<script type="text/ng-template" id="tmp4">
 			<div class="project bgbox" style="height: 1500px;">
 				<h1 class="title">项目经验</h1>
-				<h4 class="sec-title" style="text-align: left;padding-left: 100px;"> 这里是最近的一些项目,点击<a href="">这里</a>查看更多</h4>
+				<h4 class="sec-title" style="text-align: left;padding-left: 100px;"> 这里是最近的一些项目,点击<a href="https://github.com/icebale">这里</a>查看更多</h4>
 				<div class="container">
 					<div class="row ">
-						<div class="col-lg-12 projects">
-							<div class="col-lg-4">
+						<div class="col-xs-12 projects">
+							<div class="col-sm-4 col-xs-3">
 								<div class="project-title">
 									macbook(仿)
 								</div>
 							</div>
-							<div class="col-lg-8">
+							<div class="col-xs-8 col-xs-9">
 								<div class="project-details">
 									<ul>
 										<li class="time">开发时间:2016.11.10</li>
@@ -212,13 +213,13 @@
 
 					<div class="row">
 
-						<div class="col-lg-12 projects">
-							<div class="col-lg-4">
+						<div class="col-xs-12 projects">
+							<div class="col-sm-4 col-xs-3">
 								<div class="project-title">
 									后台管理
 								</div>
 							</div>
-							<div class="col-lg-8">
+							<div class="col-sm-8 col-xs-9">
 								<div class="project-details">
 									<ul>
 										<li class="time">开发时间:2016.11.10</li>
@@ -242,13 +243,13 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-12 projects">
-							<div class="col-lg-4">
+						<div class="col-xs-12 projects">
+							<div class="col-sm-4 col-xs-3">
 								<div class="project-title">
 									平行世界
 								</div>
 							</div>
-							<div class="col-lg-8">
+							<div class="col-sm-8 col-xs-9">
 								<div class="project-details">
 									<ul>
 										<li class="time">开发时间:2016.10.20</li>
@@ -273,13 +274,13 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-12 projects">
-							<div class="col-lg-4">
+						<div class="col-xs-12 projects">
+							<div class="col-sm-4 col-xs-3">
 								<div class="project-title">
 									keyBoard
 								</div>
 							</div>
-							<div class="col-lg-8">
+							<div class="col-sm-8 col-xs-9">
 								<div class="project-details">
 									<ul>
 										<li class="time">开发时间:2016.10.20</li>
@@ -313,7 +314,7 @@
 				<h4 class="sec-title">快把我收到碗里吧^_^</h4>
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-6">
+						<div class="col-sm-6 col-xs-12">
 							<form novalidate name="myForm">
 								<input type="text" name="myName" class="form-control" placeholder="用户名" ng-model="text" required ng-minlength="3" ng-maxlength="12" ng-pattern="/^\w+$/" ng-keyup="sayMsg(myForm.myName.$error,true)" />
 								<p ng-repeat="message in nameobj.nameMessages|filter:nameobj.type">{{message.msg}}</p>
@@ -323,31 +324,31 @@
 								<textarea name="" class="form-control" rows="5" cols="" placeholder="说点什么吧"></textarea>
 							</form>
 						</div>
-						<div class="col-lg-6">
-							<div class="col-lg-12">
-								<div class="col-lg-4 tubiao-box">
+						<div class="col-sm-6 col-xs-12">
+							<div class="col-xs-12">
+								<div class="col-xs-4 tubiao-box">
 									<div class="rotate-box"></div>
 									<div class="glyphicon glyphicon-map-marker"></div>
 								</div>
-								<div class="col-lg-8 words">
+								<div class="col-xs-8 words">
 									Address: 308 Negra Arroyo Lane Albuquerque, New Mexico, 87111.
 								</div>
 							</div>
-							<div class="col-lg-12">
-								<div class="col-lg-4 tubiao-box">
+							<div class="col-xs-12">
+								<div class="col-xs-4 tubiao-box">
 									<div class="rotate-box"></div>
 									<div class="glyphicon glyphicon-earphone"></div>
 								</div>
-								<div class="col-lg-8 words">
+								<div class="col-xs-8 words">
 									Cell No: 18435122708
 								</div>
 							</div>
-							<div class="col-lg-12">
-								<div class="col-lg-4 tubiao-box">
+							<div class="col-xs-12">
+								<div class="col-xs-4 tubiao-box">
 									<div class="rotate-box"></div>
 									<div class="glyphicon glyphicon-envelope"></div>
 								</div>
-								<div class="col-lg-8 words">
+								<div class="col-xs-8 words">
 									Email: xiaoying2708@163.com
 								</div>
 							</div>
